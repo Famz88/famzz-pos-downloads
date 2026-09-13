@@ -5,7 +5,7 @@ if (!(Get-Command gh -ErrorAction SilentlyContinue)) { throw 'Install GitHub CLI
 function Run-Gh {
   param([string[]]$Arguments)
   $output = & gh @Arguments
-  if ($LASTEXITCODE -ne 0) { throw "GitHub command failed: $($Arguments[0])" }
+  if ($LASTEXITCODE -ne 0) { throw "GitHub command failed: gh $($Arguments -join ' ')" }
   return $output
 }
 $sourceRepo = 'Famz88/famzz-pos'
@@ -37,11 +37,18 @@ try {
     Run-Gh -Arguments @('release','create',$tag,'--repo',$publicRepo,'--target','main','--title','FamZz POS 1.0.3 - Windows x64 preview (unsigned)','--notes-file',$notes,'--draft','--prerelease') | Out-Null
   }
   Run-Gh -Arguments @('release','upload',$tag,$exe,$sums,'--repo',$publicRepo,'--clobber') | Out-Null
-  $release = (Run-Gh -Arguments @('api',"repos/$publicRepo/releases/tags/$tag")) | ConvertFrom-Json
+  # Drafts may not resolve through the published-release tag endpoint.
+  $pages = (Run-Gh -Arguments @('api',"repos/$publicRepo/releases",'--paginate','--slurp')) | ConvertFrom-Json
+  $drafts = @($pages | ForEach-Object { $_ } | Where-Object { $_.tag_name -eq $tag })
+  if ($drafts.Count -ne 1 -or !$drafts[0].draft -or $drafts[0].body -notlike "*$expectedSha*") { throw 'Expected draft release was not found.' }
+  $releaseId = $drafts[0].id
+  $release = (Run-Gh -Arguments @('api',"repos/$publicRepo/releases/$releaseId")) | ConvertFrom-Json
   $asset = @($release.assets | Where-Object { $_.name -eq 'FamZz-POS-Setup-1.0.3-x64.exe' })
   $checksumAsset = @($release.assets | Where-Object { $_.name -eq 'SHA256SUMS.txt' })
   if ($asset.Count -ne 1 -or $checksumAsset.Count -ne 1 -or $asset[0].size -ne (Get-Item $exe).Length) { throw 'Uploaded release assets failed verification. Draft remains unpublished.' }
-  Run-Gh -Arguments @('release','edit',$tag,'--repo',$publicRepo,'--draft=false','--prerelease') | Out-Null
+  Run-Gh -Arguments @('api','--method','PATCH',"repos/$publicRepo/releases/$releaseId",'-F','draft=false','-F','prerelease=true') | Out-Null
+  $published = (Run-Gh -Arguments @('api',"repos/$publicRepo/releases/$releaseId")) | ConvertFrom-Json
+  if ($published.draft) { throw 'Release is still a draft; publication did not complete.' }
   Write-Host "Published: https://github.com/$publicRepo/releases/tag/$tag"
 } finally {
   Remove-Item -LiteralPath $folder -Recurse -Force
