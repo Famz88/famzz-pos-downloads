@@ -1,5 +1,19 @@
 # Release notes
 
+## 1.0.4
+
+- Resolved six remaining dependency advisory entries; both build-time npm audits report zero known vulnerabilities.
+- Restricted staff-directory and role configuration reads to administrators.
+- Preserved hidden configuration during staff saves and rejected injected user/role edits.
+- Added dependency audit gates to Windows CI.
+- Unsigned Windows x64 preview; see [validation and limitations](RELEASE-1.0.4.md).
+
+## 1.0.3
+
+- Bounded request/response handling, desktop integration network hardening and failed-login session clearing.
+- Dependency updates and optional Windows signing scripts.
+- [Release notes](RELEASE-1.0.3.md).
+
 ## 1.0.2
 
 - New FamZz monogram throughout sign-in, front office, back office and browser icons.

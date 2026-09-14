@@ -1,27 +1,31 @@
-# Publish v1.0.3 from your Windows PC
+# Publish v1.0.4
 
-The build exists in GitHub Actions, but a workflow artifact is not a public GitHub Release. The repository previously had only an empty, untagged draft.
+The Windows installer has passed GitHub Actions. Publish this unsigned preview using the script below. A code-signing certificate is not required.
 
-## Automated publishing
+## Existing publishing checkout
 
-1. Install [GitHub CLI](https://cli.github.com/) if needed. In PowerShell: `winget install --id GitHub.cli --exact`. Close and reopen PowerShell afterward.
-2. Run `gh auth login`, select GitHub.com and browser authentication, and sign in as the account that can read the private source repository and write the public downloads repository.
-3. Run:
+In your Windows PowerShell window:
 
 ```powershell
-gh repo clone Famz88/famzz-pos-downloads famzz-release-publish
-cd famzz-release-publish
-powershell -NoProfile -ExecutionPolicy Bypass -File .\Publish-1.0.3.ps1
+cd C:\Users\Fahmy\famzz-release-publish
+git pull --ff-only
+powershell -NoProfile -ExecutionPolicy Bypass -File .\Publish-1.0.4.ps1
 ```
 
-Read the script before running it. The execution-policy option applies to that process only. No signing certificate or GitHub token should be pasted into chat or committed.
+If GitHub asks for authentication, run `gh auth login` and sign in as the account with access to the private build repository and the public downloads repository. The execution-policy option applies only to this PowerShell process.
 
-The script fetches the specific successful Windows build, checks its installer checksum, creates a draft v1.0.3 preview release, uploads only the installer and checksum, verifies the assets, then publishes it. It can resume its own draft after an interrupted upload. It refuses to overwrite a published v1.0.3 or an unrelated draft. The older empty draft remains untouched.
+## First-time setup
 
-The installer is unsigned, and six dependency advisory entries remain. The release is marked as a preview. See [release notes](RELEASE-1.0.3.md).
+Install [GitHub CLI](https://cli.github.com/), reopen PowerShell, run `gh auth login`, then clone this repository with `gh repo clone Famz88/famzz-pos-downloads famzz-release-publish`. Enter that folder and run the publishing script.
+
+## What the script does
+
+It downloads the specific successful v1.0.4 build, checks the installer checksum, creates or resumes its own draft, uploads only the EXE and checksum, verifies the uploaded assets, and publishes the preview. Draft verification uses its numeric release ID to avoid the previous HTTP 404 from looking up an unpublished tag. Existing published releases are not overwritten.
+
+After success, open [v1.0.4](https://github.com/Famz88/famzz-pos-downloads/releases/tag/v1.0.4) and check the installer and checksum under Assets. Until then, v1.0.4 is not publicly downloadable.
 
 ## Manual alternative
 
-Download the artifact from [Windows build](https://github.com/Famz88/famzz-pos/actions/runs/34756138167) while signed in, and extract it. Open [New release](https://github.com/Famz88/famzz-pos-downloads/releases/new), use tag `v1.0.3`, copy the release notes, and attach both `FamZz-POS-Setup-1.0.3-x64.exe` and `SHA256SUMS.txt` in the binary attachment area. Select pre-release and publish after both uploads complete. Do not use the repository file uploader or put the binary in the description editor.
+Download and extract the artifact from [the successful build](https://github.com/Famz88/famzz-pos/actions/runs/34838074676). Create a release tagged `v1.0.4`, copy [the release notes](RELEASE-1.0.4.md), select pre-release, and attach `FamZz-POS-Setup-1.0.4-x64.exe` and `SHA256SUMS.txt` in the separate binary attachment area. Publish only after both uploads finish. Do not use the repository file uploader.
 
-The automatic source-code ZIP contains documentation only. Never upload private source, customer data or the license issuer key.
+Never attach private source, customer data or the license issuer key.
