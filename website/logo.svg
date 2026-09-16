@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>FamZz POS</title>
+  <rect width="64" height="64" rx="14" fill="#102d3b"/>
+  <path d="M17 15h34l-7 10H28v9h17l-7 10H28v11H17z" fill="#42e0c3"/>
+  <path d="M42 46h11v9H36z" fill="#ffbf57"/>
+</svg>
