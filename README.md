@@ -1,37 +1,66 @@
 ![FamZz POS](brand/famzz-pos.svg)
 
-# FamZz POS for Windows
+# FamZz POS — Restaurant & Retail Counter Sales
 
-Standalone restaurant point of sale with front office, back office, local staff sign-in, company licensing and an offline database.
+Try FamZz POS for your restaurant, café, cafeteria or retail counter. Manage items, record sales, organize staff access and review daily business reports from your Windows PC.
 
-## Download
+**Ready to try:** explore the browser demo or install the Windows edition for a 14-day evaluation. Configure your business and test your checkout and printer workflows before live use.
 
-**Windows v1.0.5 is published.** Open the [v1.0.5 release](https://github.com/Famz88/famzz-pos-downloads/releases/tag/v1.0.5) for the installer and SHA-256 checksum. Run the `.exe`, then open **FamZz POS** from the desktop shortcut. GitHub's automatically generated “Source code” downloads contain the public documentation, not the application installer.
-
-The installer targets 64-bit Windows 10/11 and includes the runtime. End users do not need Node.js, a browser server or ChatGPT. The app uses generic demo company and menu names. A new installation starts with sample menu items and no transaction history; configure them for your business before use.
-
-See [Installation and first setup](INSTALLATION.md) and [Using the application](USER_GUIDE.md).
+[Try the demo](https://famz88.github.io/famzz-pos-downloads/) · [Download Windows v1.0.5](https://github.com/Famz88/famzz-pos-downloads/releases/tag/v1.0.5) · [Visit our website](https://famz88.github.io/famzz-pos-downloads/website/)
 
 ## Features
 
-- Dine-in, takeaway, delivery and order management.
-- Menu, item, rate, table and staff configuration.
-- Local passwords and administrator controls.
-- Offline local database and encrypted exported backups.
-- Signed annual license-file activation, following a 14-day evaluation.
-- SAP outbound queue for a separately configured compatible integration endpoint.
-- Dark, Light and System appearance choices; Dark is the default.
+- **Restaurant ordering:** dine-in, takeaway and delivery orders, table management and kitchen order tickets (KOT).
+- **Counter sales:** select items, apply configured prices, taxes and discounts, and record the payment method.
+- **Product and menu management:** organize items into categories, maintain prices and control item availability.
+- **Receipts and reports:** print receipts and kitchen tickets, review sales and export reports.
+- **Daily operations:** manage cash shifts, income and expense vouchers, and working-day closing.
+- **Staff access:** local sign-in, user roles and administrator controls.
+- **Local operation:** keep your Windows POS records on your PC and continue local operations without internet.
+- **Backups:** export encrypted backups for recovery.
+- **Themes:** choose Dark, Light or System appearance; Dark is the default.
+- **Company licensing:** start with a 14-day evaluation, then activate an annual company license.
 
-Each PC has an independent database. This edition does not synchronize multiple tills or import an existing hosted database automatically. SAP, webhooks and messaging need configured services and internet connectivity. Card settlement records externally collected payment; a physical card terminal or cash drawer requires a separate integration.
+### Product records and inventory needs
 
-## Release status
+Use the item catalogue and sales reports to organize the products you sell. Stock-on-hand quantities, purchase orders and automatic inventory deductions are not included in this edition. If your business needs stock inventory management, contact us to discuss those requirements before purchase.
 
-**Published download: v1.0.5 (Windows x64).** The [release page](https://github.com/Famz88/famzz-pos-downloads/releases/tag/v1.0.5) contains `FamZz-POS-Setup-1.0.5-x64.exe` and `SHA256SUMS.txt`. Downloads are published in this repository; the private source repository is not the download destination.
+## Install on Windows
 
-Newer bill-after-KOT, explicit print-preview and Windows default-printer changes have passed candidate builds but are not included in the public v1.0.5 asset. Android remains in testing, and public online company registration is not open yet.
+**Requirements:** a 64-bit Windows 10 or Windows 11 PC. The installer includes the application runtime; no separate Node.js installation is needed.
 
-[Try the sample-data demo](https://famz88.github.io/famzz-pos-downloads/) · [Product website](https://famz88.github.io/famzz-pos-downloads/website/)
+1. Open the [Windows download page](https://github.com/Famz88/famzz-pos-downloads/releases/tag/v1.0.5).
+2. Under **Assets**, download **FamZz-POS-Setup-1.0.5-x64.exe** and **SHA256SUMS.txt**. Select the installer, rather than GitHub's “Source code” ZIP.
+3. Compare the installer's SHA-256 checksum with the supplied checksum file.
+4. Run the installer and follow the setup prompts. The installer is unsigned, so Windows may show an unknown-publisher notice.
+5. Open **FamZz POS** from the desktop shortcut and create your local owner account.
+6. Replace the sample company and menu details with your own business information.
 
-The Windows installer and automated business/database tests are built in the private development process. Validate installation, receipts and any connected hardware on your own till before production use. The current installer is unsigned and may show an unknown-publisher notice. Compare the supplied SHA-256 checksum before installing.
+For detailed steps, see [Installation and first setup](INSTALLATION.md).
 
-This repository distributes installers and user documentation. Public availability does not remove the application's license activation requirement. It contains no customer database, passwords or vendor license-signing key. Keep private information out of public issue reports.
+## Set up your business
+
+1. Enter your business name, outlet details and receipt information.
+2. Configure categories, products or menu items, prices, taxes and payment methods.
+3. For restaurant service, configure tables, modifiers and kitchen-ticket templates.
+4. Add staff and assign the access each person needs.
+5. Test an order, kitchen ticket where applicable, receipt and daily report.
+6. Create an encrypted backup and keep a copy outside the POS PC.
+
+## Everyday use
+
+1. Select the order type and add the customer's items.
+2. For restaurant orders, print the KOT and check the kitchen printout before proceeding.
+3. Record the payment method and complete the sale.
+4. Print the customer receipt and review the order in Order Summary.
+5. At the end of the working day, settle outstanding orders, reconcile cash shifts and complete Day Close.
+
+See the [application user guide](USER_GUIDE.md) for more instructions.
+
+Each PC has its own database; multiple tills do not automatically share records. Card payments record money collected through your separate payment terminal. Printer compatibility should be tested on your equipment. External services and integrations require their own configuration and internet access.
+
+## Activate an annual license
+
+Email your company name, Installation ID from **PC settings → License**, and the number of users and outlets you need. After your license is arranged, import the supplied company license file in that same screen.
+
+For sales, licensing, installation help or inventory requirements, email **[fahmyghazal@outlook.com](mailto:fahmyghazal@outlook.com)**.
