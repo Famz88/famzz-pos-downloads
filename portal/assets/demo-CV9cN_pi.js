@@ -1,0 +1,1 @@
+import{t as e}from"./pos-client-DF4P834O.js";import"./config-CSfsy0Ps.js";var t=document.getElementById(`start-demo`);function n(){t.disabled=!0,e({onClose:()=>{t.disabled=!1}})}t.addEventListener(`click`,n),n();
