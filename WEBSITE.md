@@ -6,4 +6,4 @@ Cloudflare Worker: `famzz-pos-website`. Configuration: `wrangler.website.json`. 
 
 Validate changes with `git diff --check`, desktop/mobile browser previews, anchor and asset checks, and `wrangler deploy --config wrangler.website.json --dry-run`. Publish using Wrangler 4 with `wrangler deploy --config wrangler.website.json` from this repository. Verify HTTPS, page content, CSS, logo, headers, robots.txt, sitemap.xml and the app link after deployment.
 
-Pricing is contact-based. Sales/support enquiries use the existing published address fahmyghazal@outlook.com. The site has no enquiry backend, analytics scripts or payment collection. Keep marketing claims aligned with the online app; legacy desktop downloads elsewhere in this repository are not the current online product.
+Pricing is contact-based. Sales/support enquiries use the existing published address support@famzzpos.com. The site has no enquiry backend, analytics scripts or payment collection. Keep marketing claims aligned with the online app; legacy desktop downloads elsewhere in this repository are not the current online product.
