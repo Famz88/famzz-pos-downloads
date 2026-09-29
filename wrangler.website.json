@@ -1,0 +1,17 @@
+{
+  "name": "famzz-pos-website",
+  "compatibility_date": "2026-09-17",
+  "assets": {
+    "directory": "./website"
+  },
+  "routes": [
+    {
+      "pattern": "famzzpos.com",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.famzzpos.com",
+      "custom_domain": true
+    }
+  ]
+}
