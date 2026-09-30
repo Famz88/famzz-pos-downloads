@@ -63,4 +63,4 @@ Each PC has its own database; multiple tills do not automatically share records.
 
 Email your company name, Installation ID from **PC settings → License**, and the number of users and outlets you need. After your license is arranged, import the supplied company license file in that same screen.
 
-For sales, licensing, installation help or inventory requirements, email **[fahmyghazal@outlook.com](mailto:fahmyghazal@outlook.com)**.
+For sales, licensing, installation help or inventory requirements, email **[support@famzzpos.com](mailto:support@famzzpos.com)**.
