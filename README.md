@@ -6,7 +6,7 @@ Try FamZz POS for your restaurant, café, cafeteria or retail counter. Manage it
 
 **Ready to try:** explore the browser demo or install the Windows edition for a 14-day evaluation. Configure your business and test your checkout and printer workflows before live use.
 
-[Try the demo](https://famz88.github.io/famzz-pos-downloads/) · [Download Windows v1.0.5](https://github.com/Famz88/famzz-pos-downloads/releases/tag/v1.0.5) · [Visit our website](https://famz88.github.io/famzz-pos-downloads/website/)
+[Try the demo](https://famz88.github.io/famzz-pos-downloads/) · [Download Windows v1.1.0]([https://github.com/Famz88/famzz-pos-downloads/releases/tag/v1.0.5](https://github.com/Famz88/famzz-pos-downloads/releases/tag/v1.1.0)) · [Visit our website](https://famz88.github.io/famzz-pos-downloads/website/)
 
 ## Features
 
@@ -29,7 +29,7 @@ Use the item catalogue and sales reports to organize the products you sell. Stoc
 
 **Requirements:** a 64-bit Windows 10 or Windows 11 PC. The installer includes the application runtime; no separate Node.js installation is needed.
 
-1. Open the [Windows download page](https://github.com/Famz88/famzz-pos-downloads/releases/tag/v1.0.5).
+1. Open the [Windows download page](https://github.com/Famz88/famzz-pos-downloads/releases/tag/v1.0.5](https://github.com/Famz88/famzz-pos-downloads/releases/tag/v1.1.0).
 2. Under **Assets**, download **FamZz-POS-Setup-1.0.5-x64.exe** and **SHA256SUMS.txt**. Select the installer, rather than GitHub's “Source code” ZIP.
 3. Compare the installer's SHA-256 checksum with the supplied checksum file.
 4. Run the installer and follow the setup prompts. The installer is unsigned, so Windows may show an unknown-publisher notice.
