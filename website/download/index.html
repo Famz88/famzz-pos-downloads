@@ -1,51 +1,36 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Download the latest FamZz POS Windows desktop application.">
-<meta name="theme-color" content="#0c171c">
-<title>Download FamZz POS for Windows</title>
-<link rel="icon" href="../logo.svg">
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Download FamZz POS applications for desktop and mobile."><meta name="theme-color" content="#0c171c">
+<title>Download Applications — FamZz POS</title><link rel="icon" href="../logo.svg">
 <style>
-:root{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#132026;background:#f4f7f6}
-*{box-sizing:border-box}body{margin:0;min-height:100vh}
-header{height:72px;background:#0c171c;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 max(24px,calc((100vw - 1120px)/2))}
-.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-size:22px;font-weight:800}.brand img{width:36px;height:36px}.brand span{color:#ee5a62}
-header a.back{color:#d9e3df;text-decoration:none;font-size:14px}
-main{width:min(1120px,calc(100% - 40px));margin:0 auto;padding:76px 0 64px}
-.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center}
-.eyebrow{font-size:12px;font-weight:800;letter-spacing:.14em;color:#6b7773;margin:0 0 18px}
-h1{font-size:clamp(42px,6vw,68px);line-height:1.02;letter-spacing:-.045em;margin:0 0 24px;max-width:760px}
-.lead{font-size:19px;line-height:1.7;color:#596663;max-width:690px;margin:0}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.button{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:10px;padding:15px 22px;text-decoration:none;font-weight:750;border:1px solid #cfd8d5;color:#132026;background:#fff}.button.primary{background:#e94e59;border-color:#e94e59;color:#fff;box-shadow:0 10px 24px rgba(233,78,89,.22)}.button[aria-disabled=true]{opacity:.6;pointer-events:none}
-.meta{font-size:14px;color:#6b7773;margin-top:15px}
-.panel{background:#0f1d22;color:#fff;border-radius:22px;padding:32px;box-shadow:0 24px 60px rgba(12,23,28,.16)}
-.panel h2{font-size:23px;margin:0 0 22px}.feature{padding:16px 0;border-top:1px solid rgba(255,255,255,.12);display:flex;gap:14px}.feature:first-of-type{border-top:0}.icon{width:34px;height:34px;border-radius:9px;background:rgba(238,90,98,.14);display:grid;place-items:center;flex:0 0 auto}.feature strong{display:block;margin-bottom:4px}.feature p{margin:0;color:#afbfba;font-size:14px;line-height:1.5}
-.trust{margin-top:64px;padding-top:28px;border-top:1px solid #dce3e0;display:flex;gap:30px;flex-wrap:wrap;color:#66736f;font-size:14px}.trust strong{color:#263632}
-@media(max-width:800px){header{padding:0 20px}.hero{grid-template-columns:1fr}main{padding-top:48px}.panel{padding:25px}h1{font-size:44px}}
-</style>
-</head>
-<body>
-<header><a class="brand" href="/"><img src="../logo.svg" alt="">FamZz <span>POS</span></a><a class="back" href="/">← Back to website</a></header>
-<main>
-<section class="hero">
-<div>
-<p class="eyebrow">FAMZZ POS DESKTOP</p>
-<h1>Your POS.<br>Ready for Windows.</h1>
-<p class="lead">Bring FamZz POS to your Windows counter with a dedicated desktop experience. Work online with your company workspace and keep authorized sales moving during temporary connection interruptions.</p>
-<div class="actions"><a id="download" class="button primary" href="https://github.com/Famz88/famzz-pos-downloads/releases/latest" aria-disabled="true">↓ Download for Windows</a><a class="button" href="https://app.famzzpos.com/login">Open Web POS ↗</a></div>
-<p id="meta" class="meta">Checking the latest Windows release…</p>
-</div>
-<aside class="panel">
-<h2>Built for daily operations</h2>
-<div class="feature"><div class="icon">✓</div><div><strong>Online + offline continuity</strong><p>Secure offline support helps authorized users continue essential POS work and synchronize when connectivity returns.</p></div></div>
-<div class="feature"><div class="icon">⌁</div><div><strong>Connected company workspace</strong><p>Use the same FamZz POS company, staff permissions and operational data across your workspace.</p></div></div>
-<div class="feature"><div class="icon">▣</div><div><strong>Counter & kitchen workflow</strong><p>Support KOT-first ordering, settlement and the printing workflow your team uses every day.</p></div></div>
-</aside>
-</section>
-<div class="trust"><span><strong>Windows x64</strong> desktop application</span><span><strong>Official FamZz POS</strong> download</span><span><strong>Latest release</strong> selected automatically</span></div>
-</main>
-<script>
-(async()=>{const b=document.getElementById('download'),m=document.getElementById('meta');try{const r=await fetch('https://api.github.com/repos/Famz88/famzz-pos-downloads/releases/latest',{headers:{Accept:'application/vnd.github+json'}});if(!r.ok)throw 0;const x=await r.json(),a=(x.assets||[]).find(a=>/\.exe$/i.test(a.name));if(!a)throw 0;b.href=a.browser_download_url;b.removeAttribute('aria-disabled');m.textContent=(x.name||x.tag_name)+' · '+(a.size/1024/1024).toFixed(1)+' MB · Windows x64'}catch(e){b.removeAttribute('aria-disabled');m.textContent='Latest Windows release';}})();
-</script>
+:root{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#172126;background:#f3f6f7}*{box-sizing:border-box}body{margin:0}
+header{height:58px;background:#fff;border-bottom:1px solid #dfe5e7;display:flex;align-items:center;justify-content:space-between;padding:0 22px;position:sticky;top:0;z-index:2}
+.brand{display:flex;align-items:center;gap:9px;color:#172126;text-decoration:none;font-weight:800;font-size:18px}.brand img{width:26px;height:26px}.brand span{color:#e94e59}
+.back{font-size:14px;color:#536066;text-decoration:none}.wrap{width:min(1320px,calc(100% - 32px));margin:26px auto 60px}
+.title{margin-bottom:22px}.title h1{font-size:28px;margin:0 0 5px}.title p{margin:0;color:#68757a}
+.section{background:#fff;border:1px solid #dfe5e7;border-radius:12px;margin:0 0 18px;box-shadow:0 2px 8px rgba(17,31,37,.035);overflow:hidden}
+.section-head{padding:20px 22px 16px;border-bottom:1px solid #e8edef}.section-head h2{margin:0;font-size:21px}.section-head p{margin:4px 0 0;color:#778287;font-size:13px}
+.grid{padding:18px 22px 22px;display:grid;grid-template-columns:repeat(4,minmax(220px,1fr));gap:14px}
+.card{min-height:142px;border:1px solid #d7dfe2;border-radius:11px;padding:16px;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;color:inherit;transition:.16s;background:#fff}.card:hover{border-color:#aebbc0;box-shadow:0 7px 20px rgba(20,37,44,.08);transform:translateY(-1px)}
+.card.disabled{opacity:.62;cursor:default}.top{display:flex;justify-content:space-between;align-items:center}.badge{display:inline-flex;align-items:center;gap:7px;border:1px solid #dce3e6;background:#f5f7f8;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:750}.download{font-size:19px;color:#647176}
+.app{display:flex;align-items:center;gap:12px}.app-icon{width:46px;height:46px;border-radius:11px;background:#0c9186;display:grid;place-items:center;padding:8px}.app-icon img{width:100%;height:100%}.app strong{display:block;font-size:14px}.app small{display:block;color:#768187;margin-top:4px}
+.notice{padding:0 22px 22px;color:#6b777c;font-size:13px}.coming{background:#f8fafb}
+@media(max-width:1050px){.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.grid{grid-template-columns:1fr}.wrap{width:min(100% - 20px,1320px)}.back{display:none}}
+</style></head>
+<body><header><a class="brand" href="/"><img src="../logo.svg" alt="">FamZz <span>POS</span></a><a class="back" href="/">← Back to website</a></header>
+<main class="wrap"><div class="title"><h1>Download Applications</h1><p>Choose the FamZz POS application for your device.</p></div>
+<section class="section"><div class="section-head"><h2>Desktop</h2><p>Windows desktop application</p></div><div class="grid">
+<a id="windows" class="card" href="https://github.com/Famz88/famzz-pos-downloads/releases/latest">
+<div class="top"><span class="badge">▣ &nbsp; Windows</span><span class="download">⇩</span></div>
+<div class="app"><span class="app-icon"><img src="../logo.svg" alt=""></span><div><strong>FamZz POS for Windows</strong><small id="windows-meta">Checking latest release…</small></div></div></a>
+</div><div class="notice">Recommended for Windows x64 counters, cashier stations and back-office computers.</div></section>
+<section class="section"><div class="section-head"><h2>Phone</h2><p>Mobile applications</p></div><div class="grid">
+<div class="card disabled coming"><div class="top"><span class="badge">▶ &nbsp; Android</span><span class="download">Soon</span></div><div class="app"><span class="app-icon"><img src="../logo.svg" alt=""></span><div><strong>FamZz POS for Android</strong><small>Android app deployment coming next</small></div></div></div>
+<div class="card disabled coming"><div class="top"><span class="badge">● &nbsp; iOS</span><span class="download">Soon</span></div><div class="app"><span class="app-icon"><img src="../logo.svg" alt=""></span><div><strong>FamZz POS for iPhone</strong><small>Planned</small></div></div></div>
+</div></section>
+<section class="section"><div class="section-head"><h2>Tablet</h2><p>Applications optimized for larger touch screens</p></div><div class="grid">
+<div class="card disabled coming"><div class="top"><span class="badge">▶ &nbsp; Android Tablet</span><span class="download">Soon</span></div><div class="app"><span class="app-icon"><img src="../logo.svg" alt=""></span><div><strong>FamZz POS for Android Tablet</strong><small>Will use the upcoming Android deployment</small></div></div></div>
+<div class="card disabled coming"><div class="top"><span class="badge">● &nbsp; iPad</span><span class="download">Soon</span></div><div class="app"><span class="app-icon"><img src="../logo.svg" alt=""></span><div><strong>FamZz POS for iPad</strong><small>Planned</small></div></div></div>
+</div></section></main>
+<script>(async()=>{try{const r=await fetch('https://api.github.com/repos/Famz88/famzz-pos-downloads/releases/latest',{headers:{Accept:'application/vnd.github+json'}});if(!r.ok)throw 0;const x=await r.json(),a=(x.assets||[]).find(a=>/\.exe$/i.test(a.name));if(!a)throw 0;document.getElementById('windows').href=a.browser_download_url;document.getElementById('windows-meta').textContent=(x.name||x.tag_name)+' · '+(a.size/1024/1024).toFixed(1)+' MB'}catch(e){document.getElementById('windows-meta').textContent='Latest Windows release'}})();</script>
 </body></html>
