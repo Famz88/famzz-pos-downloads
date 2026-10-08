@@ -5,3 +5,12 @@
 /* Keep intrinsic demo-video dimensions inside the page at every viewport. */
 .video-card{min-width:0;max-width:100%}.video-card video{max-width:100%;height:auto;object-fit:contain}.video-meta{flex-wrap:wrap;overflow-wrap:anywhere}.demo-request{border-block:1px solid var(--line);background:var(--panel)}
 @media(max-width:520px){.video-demo{padding:60px 20px!important}.video-meta{align-items:flex-start!important}.demo-request .button{width:100%}}
+
+/* Demo layout: external styles remain compatible with the existing CSP. */
+.demo-layout-1{padding:90px 32px;border-top:1px solid var(--line)}
+.demo-layout-2{max-width:620px}
+.demo-layout-3{margin-top:38px;background:#0c171c;border:1px solid #29434a;border-radius:12px;overflow:hidden}
+.demo-layout-4{display:block;width:100%;max-height:680px;background:#071015}
+.demo-layout-5{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:16px 20px;color:#c6d8d9;font-size:14px}
+.demo-layout-6{color:var(--mint)}
+.demo-layout-7{color:var(--mint)}
