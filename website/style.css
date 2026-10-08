@@ -14,3 +14,5 @@
 .demo-layout-5{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:16px 20px;color:#c6d8d9;font-size:14px}
 .demo-layout-6{color:var(--mint)}
 .demo-layout-7{color:var(--mint)}
+
+.offer-period{font-size:20px;font-weight:400;white-space:nowrap}
