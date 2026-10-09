@@ -16,3 +16,12 @@
 .demo-layout-7{color:var(--mint)}
 
 .offer-period{font-size:20px;font-weight:400;white-space:nowrap}
+
+/* Short introduction: user-controlled playback, mobile-friendly vertical framing. */
+.promo-section{display:grid;grid-template-columns:1fr 360px;gap:70px;align-items:center;border-bottom:1px solid var(--line);padding-block:60px}
+.promo-copy{max-width:580px}.promo-copy .button{margin-top:14px}.promo-copy .caption{max-width:420px}
+.promo-player{min-width:0;display:flex;flex-direction:column;align-items:center;gap:14px}
+.promo-player video{display:block;width:100%;height:auto;aspect-ratio:9/16;border:1px solid var(--line);border-radius:12px;background:#101820;object-fit:contain}
+.promo-open{font-size:14px}
+@media(max-width:850px){.promo-section{grid-template-columns:1fr;gap:30px}.promo-player{width:min(100%,320px);justify-self:center}}
+@media(max-width:520px){.promo-section{padding:48px 20px}.promo-copy .button{width:100%}.promo-player{width:min(100%,280px)}}
